@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&family=Ubuntu:wght@300;700&display=swap');
+
+:root {
+  /* COLORS */
+
+  --primary-color: #707070;
+  --secondary-color: #143774;
+  --accent-color: #1175aa;
+  --border-color: #ebebeb;
+
+  /* FONT-FAMILY */
+
+  --font: 'Ubuntu', sans-serif;
+  --accent-font: 'Lora', serif;
+}
+
+/* MIXINS */
+
+$mobile: 510px;
+$medium: 865px;
+
+@mixin breakpoint($width) {
+  @media screen and (min-width: $width) {
+    @content;
+  }
+}
+
+/* STYLES */
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-family: var(--font);
+  font-size: 1.125rem;
+  line-height: 1.5;
+  background-color: #fff;
+  color: var(--primary-color);
+}
+
+.skip-link {
+  position: absolute;
+  left: -1000px;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  block-size: auto;
+  object-fit: cover;
+  margin-block-end: 1.5em;
+}
+
+button {
+  border: none;
+  background: none;
+}
+
+ul {
+  list-style: none;
+}
+
+header {
+  margin-block-end: 3em;
+}
+
+
+@include breakpoint($medium) {
+    .container--flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    main {
+      width: 65%;
+    }
+
+    .sidebar {
+      width: 30%;
+      min-width: 250px;
+      margin-inline-start: 1em;
+    }
+  }
+}
+
+.wrapper,
+.container {
+  max-width: 900px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.article {
+  margin-block-end: 2em;
+
+  &__paragraph,
+  &__meta {
+    margin-block-end: 1.5em;
+  }
+}
+
+h2 {
+  margin-block-end: 0.5em;
+}
+
+.wrapper--border {
+  padding: 1.5em;
+  border: 20px solid var(--border-color);
+  margin-block-end: 3em;
+}
+
+/* FOOTER */
+
+.footer {
+  margin-block-start: 3em;
+  padding-block: 2em;
+  background-color: var(--secondary-color);
+
+  .copy {
+    display: block;
+  }
+}

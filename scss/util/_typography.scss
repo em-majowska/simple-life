@@ -1,0 +1,118 @@
+@use 'config' as u;
+
+h1 {
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 1.125rem;
+}
+
+button,
+.article__meta {
+  font-size: 0.875rem;
+}
+
+header p {
+  font-size: 0.75rem;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--accent-font);
+  color: var(--secondary-color);
+  font-weight: 400;
+}
+
+a {
+  color: var(--accent-color);
+
+  .nav & {
+    font-size: 1rem;
+    text-transform: uppercase;
+    color: #717171;
+    text-decoration: none;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+
+    &:not(.current-page):hover,
+    &:not(.current-page):focus {
+      color: var(--accent-color);
+    }
+  }
+
+  &:not(.current-page):hover,
+  &:not(.current-page):focus {
+    color: var(--secondary-color);
+  }
+
+  &.header__main,
+  h2 &,
+  h3 & {
+    text-decoration: none;
+    color: var(--secondary-color);
+
+  }
+  h2 &:hover, h3 &:hover,
+  h2 &:focus, h3 &:focus {
+    text-decoration: underline;
+  }
+}
+
+.widget--about-me h2,
+.widget--recent-posts h2 {
+  font-size: 1.125rem;
+  font-family: var(--font);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.125rem;
+
+  @include u.breakpoint(u.$medium) {
+    font-weight: 800;
+  }
+}
+
+button,
+header p {
+  font-weight: 700;
+  color: var(--accent-color);
+  text-transform: uppercase;
+  letter-spacing: 0.15rem;
+}
+
+button {
+  cursor: pointer;
+
+  &:hover {
+    color: var(--secondary-color);
+    text-decoration: underline;
+  }
+}
+
+.article {
+  &__paragraph {
+    max-width: 65ch;
+    font-weight: 300;
+
+    &:not(.article__meta) span {
+      font-weight: 700;
+    }
+
+    @include u.breakpoint(u.$medium) {
+      font-size: 1.125rem;
+    }
+  }
+}
+
+.footer {
+  color: hsla(0, 0%, 100%, 0.8);
+  font-weight: 700;
+  text-align: center;
+  .copy {
+    font-weight: 300;
+  }
+}
