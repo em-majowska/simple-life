@@ -32,7 +32,7 @@ Main learning points of following this tutorial:
 
 ## My process
 
-I started out with reviewing the concept at the beginning of tutorial. Next, I opened the [resource provided by Kevin](https://xd.adobe.com/spec/75d448ea-569a-4b7e-721b-9bbd3b2b97b9-03e5/grid) and coded the whole page with scss by myself. Lastly, I reviewed the second part of tutorial to notice and correct any mistakes in my project, e.g. missing <aside> element, messy paddings and margins.
+I started out with reviewing the concept at the beginning of tutorial. Next, I opened the [resource provided by Kevin](https://xd.adobe.com/spec/75d448ea-569a-4b7e-721b-9bbd3b2b97b9-03e5/grid) and coded the whole page with scss by myself. Lastly, I reviewed the second part of tutorial to notice and correct any mistakes in my project, e.g. missing aside element, messy paddings and margins.
 As last touch-up, I checked the accessibility of the website with tabs, added few links and a skip-link at the top of page.
 
 ### Built with
